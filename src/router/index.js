@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import memleak from '@/components/reviews/memleak'
-import results from '@/components/reviews/results'
+import memleak from '@/components/memleak'
 Vue.use(Router)
 
 export default new Router({
@@ -10,11 +9,6 @@ export default new Router({
       path: '/',
       name: 'memleak',
       component: memleak
-    },
-    {
-      path: '/results',
-      name: 'results',
-      component: results
     }
   ]
 })
