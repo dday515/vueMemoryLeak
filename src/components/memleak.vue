@@ -9,7 +9,7 @@
     <br>
 
     <el-row>
-      <el-col :span="24">
+      <el-col :span="12">
 
         <label>Toggle TinyMCE</label>
         <input type="checkbox" v-model="showTinyMCE">
@@ -26,6 +26,27 @@
           <TinyMCE id="tinyMCEsimple10" v-model="txtval10"></TinyMCE>
           <TinyMCE id="tinyMCEsimple11" v-model="txtval11"></TinyMCE>
           <TinyMCE id="tinyMCEsimple12" v-model="txtval12"></TinyMCE>
+        </div>
+
+      </el-col>
+      <el-col :span="12">
+
+        <label>Toggle TinyMCE Directive</label>
+        <input type="checkbox" v-model="showTinyMCEDirective">
+        <div v-if="showTinyMCEDirective">
+          <textarea v-model="txtval" rows="10" v-tinymce-editor="txtval"></textarea>
+          <textarea v-model="txtval2" rows="10" v-tinymce-editor="txtval2"></textarea>
+          <textarea v-model="txtval3" rows="10" v-tinymce-editor="txtval3"></textarea>
+          <textarea v-model="txtval4" rows="10" v-tinymce-editor="txtval4"></textarea>
+          <textarea v-model="txtval5" rows="10" v-tinymce-editor="txtval5"></textarea>
+          <textarea v-model="txtval6" rows="10" v-tinymce-editor="txtval6"></textarea>
+          <textarea v-model="txtval7" rows="10" v-tinymce-editor="txtval7"></textarea>
+          <textarea v-model="txtval8" rows="10" v-tinymce-editor="txtval8"></textarea>
+          <textarea v-model="txtval9" rows="10" v-tinymce-editor="txtval9"></textarea>
+          <textarea v-model="txtval10" rows="10" v-tinymce-editor="txtval10"></textarea>
+          <textarea v-model="txtval11" rows="10" v-tinymce-editor="txtval11"></textarea>
+          <textarea v-model="txtval12" rows="10" v-tinymce-editor="txtval12"></textarea>
+
         </div>
 
       </el-col>
@@ -46,6 +67,7 @@
         wrapped: false,
         unwrapped: false,
         showTinyMCE: false,
+        showTinyMCEDirective: false,
         msg: "Welcome to Your Vue.js App",
         txtval: "here is some sample text",
         txtval2: "here is some sample text2",
